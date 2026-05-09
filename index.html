@@ -627,6 +627,107 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; background: var(-
 
   </div>
 
+  <!-- WIFI -->
+  <div id="section-wifi" class="section-panel">
+
+    <!-- Banner -->
+    <div style="background:linear-gradient(135deg,#1d5f7a,#2a82a0);border-radius:16px;padding:20px;text-align:center;">
+      <div style="font-size:36px;margin-bottom:6px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 8.5a17 17 0 0 1 21 0M5 12.5a11 11 0 0 1 14 0M8.5 16.5a6 6 0 0 1 7 0M12 21a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1z" fill="white"/></svg>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:white;margin-bottom:4px;">Wi-Fi Gratuito</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.8);line-height:1.6;">Sinal disponível em toda a pousada</div>
+    </div>
+
+    <!-- Cobertura -->
+    <div class="alert alert-info">
+      <span class="alert-icon">📡</span>
+      <div>Sinal disponível em toda a pousada — suítes, restaurante, piscina, portaria e estacionamento.</div>
+    </div>
+
+    <!-- Redes sem senha -->
+    <div class="card">
+      <div class="card-head card-head-azul">
+        <span class="card-head-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1.5 8.5a17 17 0 0 1 21 0M5 12.5a11 11 0 0 1 14 0M8.5 16.5a6 6 0 0 1 7 0M12 21a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1z" fill="white"/></svg>
+        </span>
+        <span class="card-head-title">Redes Disponíveis</span>
+      </div>
+      <div class="card-body">
+
+        <!-- Rede 1 -->
+        <div class="wifi-box" style="margin-bottom:10px;">
+          <div class="wifi-box-label">📱 Rede Principal</div>
+          <div class="wifi-box-name">Aconchego no Campo</div>
+          <div class="wifi-badge">✅ Acesso Livre — Sem Senha</div>
+        </div>
+
+        <!-- Rede 2 -->
+        <div class="wifi-box" style="margin-bottom:10px;">
+          <div class="wifi-box-label">📱 Rede Hóspedes</div>
+          <div class="wifi-box-name">Hospedes</div>
+          <div class="wifi-badge">✅ Acesso Livre — Sem Senha</div>
+        </div>
+
+        <!-- Rede 3 -->
+        <div class="wifi-box" style="margin-bottom:0;">
+          <div class="wifi-box-label">📱 Portaria & Estacionamento</div>
+          <div class="wifi-box-name">Portaria e Estacionamento</div>
+          <div class="wifi-badge">✅ Acesso Livre — Sem Senha</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Redes com senha -->
+    <div class="card">
+      <div class="card-head" style="background:linear-gradient(90deg,#7b5030,#c48050);border-bottom:2px solid #e8d08a;">
+        <span class="card-head-icon">🔐</span>
+        <span class="card-head-title">Redes com Senha</span>
+      </div>
+      <div class="card-body">
+        <div style="background:#fff8e8;border-left:3px solid #c9a84c;border-radius:0 10px 10px 0;padding:12px 14px;font-size:13px;color:#7a5a18;line-height:1.65;margin-bottom:14px;">
+          Alguns dispositivos não conectam em redes abertas. Use as mesmas redes acima com a senha numérica abaixo:
+        </div>
+
+        <!-- Rede 1 com senha -->
+        <div class="wifi-box" style="margin-bottom:10px;">
+          <div class="wifi-box-label">📱 Rede Principal</div>
+          <div class="wifi-box-name">Aconchego no Campo</div>
+          <div class="wifi-badge" style="background:#5a7a3a;">🔒 Com senha disponível</div>
+        </div>
+
+        <!-- Rede 2 com senha -->
+        <div class="wifi-box" style="margin-bottom:10px;">
+          <div class="wifi-box-label">📱 Rede Hóspedes</div>
+          <div class="wifi-box-name">Hospedes</div>
+          <div class="wifi-badge" style="background:#5a7a3a;">🔒 Com senha disponível</div>
+        </div>
+
+        <!-- Rede 3 com senha -->
+        <div class="wifi-box" style="margin-bottom:14px;">
+          <div class="wifi-box-label">📱 Portaria & Estacionamento</div>
+          <div class="wifi-box-name">Portaria e Estacionamento</div>
+          <div class="wifi-badge" style="background:#5a7a3a;">🔒 Com senha disponível</div>
+        </div>
+
+        <!-- Senha em destaque -->
+        <div style="background:#6b2737;border-radius:12px;padding:16px;text-align:center;">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.6);margin-bottom:6px;">Senha para todas as redes</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:#f5d98a;letter-spacing:6px;">12345678</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:6px;">Use se o seu dispositivo não conectar automaticamente</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="alert alert-tip">
+      <span class="alert-icon">💡</span>
+      <div>Dúvidas para conectar? Ligue para a recepção: <a href="https://wa.me/5511916335890" target="_blank" style="color:#4a3880;font-weight:700;text-decoration:none;">📲 (11) 91633-5890</a></div>
+    </div>
+
+  </div>
+
   <!-- REFEIÇÕES -->
   <div id="section-refeicoes" class="section-panel">
 

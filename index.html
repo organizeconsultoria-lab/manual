@@ -154,9 +154,9 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; background: var(-
 <!-- GRADE DE ÍCONES -->
 <div class="app-home" id="app-home">
   <div class="app-grid">
-    <button class="app-icon" onclick="openSection('inicio')">
-      <div class="app-icon-bubble">🏡</div>
-      <span class="app-icon-label">Início</span>
+    <button class="app-icon" onclick="openSection('checkin')">
+      <div class="app-icon-bubble">📅</div>
+      <span class="app-icon-label">Check-in</span>
     </button>
     <button class="app-icon" onclick="openSection('refeicoes')">
       <div class="app-icon-bubble">🍽️</div>
@@ -169,6 +169,18 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; background: var(-
     <button class="app-icon" onclick="openSection('wifi')">
       <div class="app-icon-bubble"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="white"><path d="M1.5 8.5a17 17 0 0 1 21 0M5 12.5a11 11 0 0 1 14 0M8.5 16.5a6 6 0 0 1 7 0M12 20.5a1 1 0 1 1 0-.001"/></svg></div>
       <span class="app-icon-label">Wi-Fi</span>
+    </button>
+    <button class="app-icon" onclick="openSection('regras')">
+      <div class="app-icon-bubble">📖</div>
+      <span class="app-icon-label">Regras</span>
+    </button>
+    <button class="app-icon" onclick="openSection('frigobar')">
+      <div class="app-icon-bubble">🧃</div>
+      <span class="app-icon-label">Frigobar</span>
+    </button>
+    <button class="app-icon" onclick="openSection('limpeza')">
+      <div class="app-icon-bubble">🧹</div>
+      <span class="app-icon-label">Limpeza</span>
     </button>
     <button class="app-icon" onclick="openSection('piscina')">
       <div class="app-icon-bubble">🏊</div>
@@ -189,18 +201,6 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; background: var(-
     <button class="app-icon" onclick="openSection('turismo')">
       <div class="app-icon-bubble">🍷</div>
       <span class="app-icon-label">Turismo</span>
-    </button>
-    <button class="app-icon" onclick="openSection('suite')">
-      <div class="app-icon-bubble">🛏️</div>
-      <span class="app-icon-label">Suíte</span>
-    </button>
-    <button class="app-icon" onclick="openSection('regras')">
-      <div class="app-icon-bubble">📖</div>
-      <span class="app-icon-label">Regras</span>
-    </button>
-    <button class="app-icon" onclick="openSection('checkin')">
-      <div class="app-icon-bubble">📅</div>
-      <span class="app-icon-label">Check-in</span>
     </button>
   </div>
 </div>
@@ -376,7 +376,16 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; background: var(-
             <span class="rule-emoji">📞</span>
             <div>
               <div class="rule-title">Como solicitar</div>
-              <div class="rule-desc">Ligue para a recepção ou passe pessoalmente para agendar a limpeza. Faremos no horário que for mais conveniente para você.</div>
+              <div class="rule-desc">
+                Entregue a chave da suíte na recepção ou para qualquer funcionário da pousada e informe o tipo de serviço que deseja:<br><br>
+                <span style="display:block;background:#f0f8f0;border-radius:8px;padding:10px 12px;margin-top:6px;font-size:12px;color:#2e5c30;line-height:1.8;">
+                  🛏️ <strong>Arrumação da cama</strong><br>
+                  🧺 <strong>Troca de toalhas</strong><br>
+                  🚿 <strong>Limpeza do banheiro</strong><br>
+                  🗑️ <strong>Retirada do lixo</strong><br>
+                  ✨ <strong>Limpeza completa</strong>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -422,6 +431,250 @@ html, body { height: 100%; font-family: 'DM Sans', sans-serif; background: var(-
     <div class="alert alert-tip">
       <span class="alert-icon">💡</span>
       <div>Use o menu acima para navegar entre as seções e encontrar tudo que precisa!</div>
+    </div>
+  </div>
+
+  <!-- REGRAS -->
+  <div id="section-regras" class="section-panel">
+    <div style="background:linear-gradient(135deg,var(--vinho),var(--vinho-light));border-radius:16px;padding:20px;text-align:center;">
+      <div style="font-size:36px;margin-bottom:6px;">📖</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#e8d08a;margin-bottom:4px;">Regras da Pousada</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.75);line-height:1.6;">Para uma estadia agradável para todos</div>
+    </div>
+    <div class="card">
+      <div class="card-head card-head-vinho">
+        <span class="card-head-icon">📖</span>
+        <span class="card-head-title">Regras & Informações</span>
+      </div>
+      <div class="card-body">
+        <div class="rules-list">
+          <div class="rule-item">
+            <span class="rule-emoji">🍳</span>
+            <div>
+              <div class="rule-title">Preparação de Alimentos</div>
+              <div class="rule-desc">Não é permitido preparar alimentos na suíte. Proibido uso de fritadeiras, sanduicheiras, churrasqueiras e similares nos quartos.</div>
+            </div>
+          </div>
+          <div class="rule-item">
+            <span class="rule-emoji">🔇</span>
+            <div>
+              <div class="rule-title">Silêncio & Respeito</div>
+              <div class="rule-desc">Preservamos o silêncio — <strong>proibido som alto, caixas de som em qualquer local e narguilé</strong> em parte alguma da pousada.</div>
+            </div>
+          </div>
+          <div class="rule-item">
+            <span class="rule-emoji">🐾</span>
+            <div>
+              <div class="rule-title">Animais de Estimação</div>
+              <div class="rule-desc">Permitidos com guia sempre. Não permitidos em: restaurante, piscina ou áreas fechadas.</div>
+            </div>
+          </div>
+          <div class="rule-item">
+            <span class="rule-emoji">🚫</span>
+            <div>
+              <div class="rule-title">Narguilé</div>
+              <div class="rule-desc">O uso de narguilé é <strong>proibido em qualquer área</strong> da pousada — quartos, áreas comuns, piscina e jardins.</div>
+            </div>
+          </div>
+          <div class="rule-item">
+            <span class="rule-emoji">🔥</span>
+            <div>
+              <div class="rule-title">Churrasqueiras</div>
+              <div class="rule-desc">Não é permitido uso de churrasqueiras, fogareiros ou equipamentos para assar nos quartos ou áreas não autorizadas.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reception-badge">
+      <div class="reception-icon">📞</div>
+      <div>
+        <div class="reception-label">Dúvidas? Fale conosco</div>
+        <a href="https://wa.me/5511916335890" target="_blank" class="reception-number" style="color:#e8d08a;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;">📲 (11) 91633-5890</a>
+        <div class="reception-sub">Atendimento 24 horas</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FRIGOBAR -->
+  <div id="section-frigobar" class="section-panel">
+    <div style="background:linear-gradient(135deg,#1d5f7a,#2a82a0);border-radius:16px;padding:20px;text-align:center;">
+      <div style="font-size:36px;margin-bottom:6px;">🧃</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:white;margin-bottom:4px;">Frigobar</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.8);line-height:1.6;">Itens cobrados no check-out</div>
+    </div>
+    <div class="card">
+      <div class="card-head card-head-azul">
+        <span class="card-head-icon">🧃</span>
+        <span class="card-head-title">Frigobar</span>
+      </div>
+      <div class="card-body">
+        <div style="background:linear-gradient(135deg,#e3f5fb,#c8ecf8);border-radius:12px;padding:13px 14px;margin-bottom:13px;border-left:4px solid #2a6880;font-size:13px;color:#1a4f6a;line-height:1.6;">
+          <strong>💳 Os itens do frigobar são cobrados no check-out.</strong> Ao consumir qualquer item, informe a recepção para que seja lançado na sua comanda.
+        </div>
+        <div class="rules-list">
+          <div class="rule-item">
+            <span class="rule-emoji">📋</span>
+            <div>
+              <div class="rule-title">Informe o consumo</div>
+              <div class="rule-desc">Sempre comunique à recepção o que foi consumido do frigobar — por telefone ou pessoalmente. O lançamento na comanda evita cobranças incorretas no check-out.</div>
+            </div>
+          </div>
+          <div class="rule-item">
+            <span class="rule-emoji">🏁</span>
+            <div>
+              <div class="rule-title">Pagamento no check-out</div>
+              <div class="rule-desc">Os valores são consolidados junto com outros consumos e cobrados no momento do check-out. Dúvidas? Consulte a recepção a qualquer momento.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="alert alert-info">
+      <span class="alert-icon">📲</span>
+      <div>Para informar consumo, ligue: <a href="https://wa.me/5511916335890" target="_blank" style="color:#1a4f6a;font-weight:700;text-decoration:none;">(11) 91633-5890</a></div>
+    </div>
+  </div>
+
+  <!-- LIMPEZA -->
+  <div id="section-limpeza" class="section-panel">
+    <div style="background:linear-gradient(135deg,#2e5c30,#4a8a4c);border-radius:16px;padding:20px;text-align:center;">
+      <div style="font-size:36px;margin-bottom:6px;">🧹</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:white;margin-bottom:4px;">Limpeza da Suíte</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.8);line-height:1.6;">Solicite quando precisar</div>
+    </div>
+    <div class="card">
+      <div class="card-head" style="background:linear-gradient(90deg,#2e5c30,#4a8a4c);border-bottom:2px solid #a5d6a7;">
+        <span class="card-head-icon">🧹</span>
+        <span class="card-head-title">Limpeza da Suíte</span>
+      </div>
+      <div class="card-body">
+
+        <div style="background:linear-gradient(135deg,#c0392b,#e74c3c);border-radius:14px;padding:16px;margin-bottom:12px;border:2px solid #ff6b6b;box-shadow:0 4px 16px rgba(192,57,43,0.2);">
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <span style="font-size:26px;flex-shrink:0;">⏰</span>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:white;margin-bottom:3px;">Horário limite para solicitar</div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:700;color:#ffe082;line-height:1;margin-bottom:4px;">até às 13h00</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.85);line-height:1.5;">Pedidos após este horário serão atendidos no dia seguinte.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:#fff3cd;border:2px solid #ffc107;border-radius:12px;padding:14px;margin-bottom:14px;display:flex;gap:10px;align-items:flex-start;">
+          <span style="font-size:24px;flex-shrink:0;">🗝️</span>
+          <div>
+            <div style="font-size:14px;font-weight:700;color:#856404;margin-bottom:3px;">Deixe a chave na recepção</div>
+            <div style="font-size:13px;color:#856404;line-height:1.6;">Para realizarmos a limpeza, <strong>deixe a chave da suíte na recepção</strong> ao sair. Sem a chave não conseguimos acessar o quarto.</div>
+          </div>
+        </div>
+
+        <div style="background:#edf7ee;border-left:4px solid #2e5c30;border-radius:0 10px 10px 0;padding:12px 14px;margin-bottom:13px;font-size:13px;color:#1e4d20;line-height:1.6;">
+          <strong>🛎️ Para estadias com mais de uma diária,</strong> a limpeza não é automática — você deve <strong>solicitá-la à recepção</strong> no horário de sua preferência.
+        </div>
+        <div class="rules-list">
+          <div class="rule-item">
+            <span class="rule-emoji">🛏️</span>
+            <div>
+              <div class="rule-title">O que inclui a limpeza</div>
+              <div class="rule-desc">Arrumação da cama, troca de toalhas, limpeza completa do banheiro e retirada do lixo.</div>
+            </div>
+          </div>
+          <div class="rule-item">
+            <span class="rule-emoji">📞</span>
+            <div>
+              <div class="rule-title">Como solicitar</div>
+              <div class="rule-desc">
+                Entregue a chave da suíte na recepção ou para qualquer funcionário da pousada e informe o tipo de serviço que deseja:<br><br>
+                <span style="display:block;background:#f0f8f0;border-radius:8px;padding:10px 12px;margin-top:6px;font-size:12px;color:#2e5c30;line-height:1.8;">
+                  🛏️ <strong>Arrumação da cama</strong><br>
+                  🧺 <strong>Troca de toalhas</strong><br>
+                  🚿 <strong>Limpeza do banheiro</strong><br>
+                  🗑️ <strong>Retirada do lixo</strong><br>
+                  ✨ <strong>Limpeza completa</strong>
+                </span>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="card-body">
+        <div style="background:#fff8e8;border-left:4px solid var(--ouro);border-radius:0 10px 10px 0;padding:12px 14px;margin-bottom:13px;font-size:13px;color:#7a5a18;line-height:1.6;">
+          <strong>⚠️ As roupas de cama não são trocadas durante diárias consecutivas,</strong> exceto em casos de acidente ou necessidade justificada.
+        </div>
+        <div class="rules-list">
+          <div class="rule-item">
+            <span class="rule-emoji">🍷</span>
+            <div>
+              <div class="rule-title">Manchas (vinho, etc.)</div>
+              <div class="rule-desc">Em caso de manchas — vinho, alimentos ou outras — será cobrada uma <strong>taxa de lavagem de R$ 35,00 por peça manchada.</strong></div>
+            </div>
+          </div>
+          <div class="rule-item">
+            <span class="rule-emoji">⚠️</span>
+            <div>
+              <div class="rule-title">Itens Danificados</div>
+              <div class="rule-desc">Roupas de cama, toalhas ou itens da suíte danificados serão cobrados pelo <strong>valor de mercado atual.</strong></div>
+            </div>
+          </div>
+          <div class="rule-item">
+            <span class="rule-emoji">✅</span>
+            <div>
+              <div class="rule-title">Troca por Acidente</div>
+              <div class="rule-desc">Ocorreu algum acidente? Avise a recepção imediatamente — faremos a troca sem problemas!</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reception-badge">
+      <div class="reception-icon">📞</div>
+      <div>
+        <div class="reception-label">Solicitar Limpeza</div>
+        <a href="https://wa.me/5511916335890" target="_blank" class="reception-number" style="color:#e8d08a;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;">📲 (11) 91633-5890</a>
+        <div class="reception-sub">Atendimento 24 horas</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKIN -->
+  <div id="section-checkin" class="section-panel">
+    <div style="background:linear-gradient(135deg,var(--vinho),var(--vinho-light));border-radius:16px;padding:20px;text-align:center;">
+      <div style="font-size:36px;margin-bottom:6px;">📅</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:#e8d08a;margin-bottom:4px;">Check-in & Check-out</div>
+    </div>
+    <div class="card">
+      <div class="card-head card-head-vinho">
+        <span class="card-head-icon">📅</span>
+        <span class="card-head-title">Horários</span>
+      </div>
+      <div class="card-body">
+        <div class="checkinout-grid">
+          <div class="checkinout-box">
+            <div class="checkinout-emoji">🏠</div>
+            <div class="checkinout-label">Check-in</div>
+            <div class="checkinout-time">14h00</div>
+            <div class="checkinout-sub">a partir de</div>
+          </div>
+          <div class="checkinout-box">
+            <div class="checkinout-emoji">👋</div>
+            <div class="checkinout-label">Check-out</div>
+            <div class="checkinout-time">12h00</div>
+            <div class="checkinout-sub">até</div>
+          </div>
+        </div>
+        <div class="alert alert-warn" style="margin-top:0;">
+          <span class="alert-icon">⚠️</span>
+          <div>Check-out tardio sujeito a taxa adicional. Consulte a recepção com antecedência.</div>
+        </div>
+      </div>
+    </div>
+    <div class="reception-badge">
+      <div class="reception-icon">📞</div>
+      <div>
+        <div class="reception-label">Recepção</div>
+        <a href="https://wa.me/5511916335890" target="_blank" class="reception-number" style="color:#e8d08a;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;">📲 (11) 91633-5890</a>
+        <div class="reception-sub">Atendimento 24 horas</div>
+      </div>
     </div>
   </div>
 
@@ -1410,7 +1663,9 @@ const sectionTitles = {
   turismo: '🍷 Turismo',
   suite: '🛏️ Suíte',
   regras: '📖 Regras',
-  checkin: '📅 Check-in'
+  checkin: '📅 Check-in',
+  frigobar: '🧃 Frigobar',
+  limpeza: '🧹 Limpeza da Suíte'
 };
 
 function openSection(id) {
